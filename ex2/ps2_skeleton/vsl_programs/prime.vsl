@@ -1,0 +1,26 @@
+// VSL version of prime assembly exercise, courtesy
+// of J.H.Ø. Anthony (class of 2011)
+
+FUNC main ()
+BEGIN
+    RETURN factor (1836311903)
+END
+
+FUNC factor (n)
+BEGIN
+    VAR f
+
+    f := n/2
+    WHILE n - f*(n/f) > 0 DO
+        f := f - 1
+    IF f > 1 THEN
+    BEGIN
+        VAR r
+        r := factor (f)
+        r := factor (n/f)
+    END
+    ELSE
+        PRINT n, "is a prime factor"
+
+    RETURN 0
+END

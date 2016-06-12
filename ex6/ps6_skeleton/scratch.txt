@@ -1,0 +1,16 @@
+WHILE_STATEMENT
+     WHILE_STATEMENT
+      RELATION(>)
+       EXPRESSION(-)
+        IDENTIFIER_DATA(n)
+        EXPRESSION(*)
+         IDENTIFIER_DATA(f)
+         EXPRESSION(/)
+          IDENTIFIER_DATA(n)
+          IDENTIFIER_DATA(f)
+       NUMBER_DATA(0)
+      ASSIGNMENT_STATEMENT
+       IDENTIFIER_DATA(f)
+       EXPRESSION(-)
+        IDENTIFIER_DATA(f)
+        NUMBER_DATA(1)

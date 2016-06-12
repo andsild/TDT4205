@@ -1,0 +1,9 @@
+VAR a,b
+VAR c,d
+FUNC simplify ( e, f )
+BEGIN
+    a := - ( 5*5 + 20/4 - 3 + 2)
+    PRINT "a=", a
+    IF a=0 THEN b := simplify ( c, d )
+    RETURN 0
+END

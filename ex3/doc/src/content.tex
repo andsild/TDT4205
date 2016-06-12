@@ -1,0 +1,31 @@
+\section*{Task 1}
+See attached image. All arrows point to right/down unless drawn otherwise.
+
+There is a shift-reduce conflict in state $I_{9}$ (from state $I_{0}$, recieve symbol E).
+Here, a B can have two prodution rules; $B \rightarrow \cdot{}Bb$ and $E \rightarrow E\cdot{B}$.
+The same is in state $I_{6}$ with production rules $B \rightarrow \cdot{Bb}$ and $D \rightarrow d\cdot{BEF}$.
+
+\subsection*{Task 1b}
+We augment the grammar by adding a production $A' \rightarrow A'$, such that the grammar has an accepting
+end of input.
+
+$
+FOLLOW(A') \rightarrow \{\$\} \\                              
+FOLLOW(A) \rightarrow \{\$\} \\                              
+FOLLOW(B) \rightarrow \{\$, b, e\} \\                       
+FOLLOW(D) \rightarrow \{\$\} \\                              
+FOLLOW(E) \rightarrow \{b, c, f\} \\
+FOLLOW(F) \rightarrow \{\$\} \\                     
+$                                                              
+
+In the automata there is no state with two or more terminating rules
+(``dot placed to the far right'', e.g. $A \rightarrow \gamma{}\cdot$) where 
+the follow set of both non-terminals have any shared element. Also, there are
+no states where terminating rules are together with a nonterminating rule 
+(dot is not to the far right). Therefore, there will be no conflict when 
+making the SLR(1) table. Thus, the provided grammar is SLR(1).
+
+
+
+\section*{Task 2}
+Okay. My output seems to match the .tree.correct files (run checkCorrect.sh if you will)

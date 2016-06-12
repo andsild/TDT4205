@@ -1,0 +1,43 @@
+\section*{Motivation}
+Poisson's equation is a second-order partial differential equation(PDE). In simple form it is written $\Delta \partial = f$. The equation is widely used in fields such as statistics, image processing, mechanical engineering and electrostatics.
+As input sizes can scale from having few variables to several billion, it is common
+that scientific libraries provide their own optimized implementation of the solver.
+
+
+New methods for solving Poissons equation emerge often, and it is common to provide some form of a benchmark to assess the results. These benchmarks are in general not indexed in terms of complexity, appropriate domains or implementation details such as computer language, architechture and pararellization. Rather, the publishers themselves implement the methods in a language of their choice and their own selected input. This means that benchmark result
+from one publishment may not be appropriate for others (especially in the case of 
+different supercomputers).
+
+Newer methods, like wavelet solvers, are not often considered when dealing with
+large problemsets because they have a hard time competing with heavily optimized
+methods that has been in the industry for longer time. This makes it difficult to assess the effectiveness of new methods, and often when choosing methods for
+solving problems there is a preference for using existing methods rather than building on new, more promising methods.
+
+
+\section*{Research Objective}
+I draft the following research objectives to resolve the issues mentioned above:
+\begin{itemize}
+    \item Find relevant and important factors that determine scalability and optimization promise of a Poisson solver.
+    \item Categorizing input for Poissons equation such that solvers can be classified for how efficient they are in their domains
+\end{itemize}
+
+\section*{Research Method}
+One application of Poissons Equation is image gradient-field reconstruction.
+Images have many number of interesting properties, they can be modeled both as grayscale and use multiple color channels, represent pixel values in many formats, and also provide a good way to measure the difference between a solved
+instance and an original problem. Therefore, we suggest to implement the benchmarking software
+as a solver that does image-field reconstruction.
+
+Important factors involve that the program is usable and easy to use for other researchers.
+Therefore, the benchmarking software will make it easy for other researchers to 
+implement new methods and reading input.
+
+\section*{Previous work}
+In \cite{gongbench}, it is found that FFT works better  they compare different state-of-the-art method, but use only 
+4 different methods and restrict themselves to solving large problem inputs with constant coefficients. They also used the same computer for all test runs, and provided results in wall-clock seconds. The result is that their conclusions 
+
+To be continued\dots
+
+
+\section*{Background}
+There exists both exact and numerical solvers for Poisson's Equation. Solvers are in general divided into three categories: finite difference methods, finite element methods and spectral methods. Each category has its own advantage: finite difference methods are easy to implement, finite element methods scale well in complex domains, while spectral methods are accurate.
+Furthermore, within each of these three categories there are many different parameter that can be tweaked to optimize the methods for your domain, such as determining stencil size or making use of pararellization.

@@ -1,0 +1,32 @@
+String table:
+0: "is a prime factor"
+-- 
+Globals:
+factor: function 1:
+	3 local variables, 1 are parameters:
+	f: local var 0
+	n: parameter 0
+	r: local var 1
+main: function 0:
+	0 local variables, 0 are parameters:
+-- 
+Bindings:
+Linked function 1 ('factor')
+Linked local var 0 ('f')
+Linked parameter 0 ('n')
+Linked parameter 0 ('n')
+Linked local var 0 ('f')
+Linked parameter 0 ('n')
+Linked local var 0 ('f')
+Linked local var 0 ('f')
+Linked local var 0 ('f')
+Linked local var 0 ('f')
+Linked local var 1 ('r')
+Linked function 1 ('factor')
+Linked local var 0 ('f')
+Linked local var 1 ('r')
+Linked function 1 ('factor')
+Linked parameter 0 ('n')
+Linked local var 0 ('f')
+Linked parameter 0 ('n')
+Linked string 0

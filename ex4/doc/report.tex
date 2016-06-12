@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath,
+            amssymb,
+            amsthm,
+            atbegshi,
+            booktabs,
+            caption,
+            enumitem,
+            fancyhdr,
+            geometry,
+            graphicx,
+            hyperref,
+            kpfonts,
+            lipsum,
+            longtable,
+            natbib,
+            pifont,
+            rotating,
+            subcaption,
+            tabulary,
+            thmtools,
+            tikz,
+            titletoc,
+            titlesec,
+            tocloft,
+            url,
+            xparse
+}
+\usepackage[T1]{fontenc}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\setlist[enumerate]{topsep=0pt,itemsep=.41mm,partopsep=0ex,parsep=0ex}
+
+\pagestyle{fancy}
+\lhead{TDT4205}
+\rhead{Student number:730511}
+% \pagenumbering{Roman}
+\setcounter{tocdepth}{1}
+\graphicspath{{src/fig/}}
+
+
+\titleformat{\subsubsection}[runin]% runin puts it in the same paragraph
+       {\normalfont\bfseries}% formatting commands to apply to the whole heading
+       {\thesubsubsection}% the label and number
+       {0.5em}% space between label/number and subsection title
+       {}% formatting commands applied just to subsection title
+       []% punctuation or other commands following subsection title
+\title{Ps4 assignment handin}
+\author{Anders Sildnes\\
+    NTNU}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{src/content}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{src/sources}
+
+\end{document}

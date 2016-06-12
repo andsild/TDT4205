@@ -1,0 +1,14 @@
+" python3 plugins
+call remote#host#RegisterPlugin('python3', '/home/andesil/.cache/neobundle/unite.vim/rplugin/python3/unite.py', [
+      \ {'sync': 1, 'name': 'UniteInitializePython', 'opts': {}, 'type': 'command'},
+     \ ])
+call remote#host#RegisterPlugin('python3', '/home/andesil/.cache/neobundle/deoplete.nvim/rplugin/python3/deoplete.py', [
+      \ {'sync': 1, 'name': 'DeopleteInitializePython', 'opts': {}, 'type': 'command'},
+     \ ])
+
+
+" python plugins
+call remote#host#RegisterPlugin('python', '/home/andesil/.cache/neobundle/nvim-ipy/rplugin/python/nvim_ipy.py', [
+     \ ])
+
+

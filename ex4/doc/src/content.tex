@@ -1,0 +1,57 @@
+\section*{Task 1.1}
+First:\
+\begin{definition}[Syntax Directed Definitions]
+    A context free grammar where grammar symbols have semantic operations, named attributes.
+\end{definition}
+\begin{definition}[Synthesized attribute]
+    A value which is only given from a given non-terminal or any of its children.
+\end{definition}
+\begin{definition}[Inherited attribute]
+    A value for a non-terminal in a parse tree which is given from either a parent or sibling node.
+\end{definition}
+
+An S-attributed definition is an SDD where all attributes are synthesized.
+An L-attributed definition is an SDD where attributes can be either synthesized or 
+inherited. When using inherited attributes, there may be pitfalls that make interpretation difficult.  Typically, to do translation of L-attributed SDDs by traversing parse trees from left to right in a postorder, top-down fashion. 
+To avoid trouble, we apply the following constraints to inherited attributes:
+\begin{enumerate}
+    \item Inheritance must be to the left of any given node. I.e.\ for a given
+    production rule $A \rightarrow X_{1}X_{2}\dots$, any given $X_{i}$ can only
+    have its value computed by using values from $X_{j}$, for any $j < i$.
+    \item There cannot be cyclic definition, e.g.\ the following set is invalid:
+    $X \rightarrow A, A \rightarrow X$.
+\end{enumerate}
+
+\noindent Since synthesized attributes do not yield the same traversal problems, S-attributed
+defintions do not need extra constraints. S-attributed SDD can thusly be parsed bottom-up without much trouble. Since all s-attributed SDD's can also be valid as L-attributed grammars, they can also be parse the same way as an L-attributed grammar.
+
+
+\section*{Task 1.2}
+I define the following rules:
+\begin{enumerate}
+    \item $P(a,b) = a > b \wedge b:t \implies a:t$
+    \item $Q(a,b) = a : b \wedge b:t \implies a:t$
+    \item $R(a,b,c) = a:bool \wedge b:t \wedge c:t \implies ((A) b : c) : t$
+\end{enumerate}
+
+\begin{tikzpicture}[sibling distance=15em,
+  every node/.style = {shape=rectangle,
+    align=center,
+    top color=white, bottom color=white!20}]]
+  \node {$(x > 2) : y : 3.14$}
+    child { node {$x > 2$}
+        child { node {$2 : int$ }
+            child { node {$P(x,2) \implies (x > 2): bool$}
+                } } }
+    child { node {$y : 3.14$}
+      child { node {$3.14:float$}
+        child { node {$Q(y, 3.14) \implies y : float$} }
+    } }
+    child { node {$R( (x > 2), y, 3.14) \implies (x > 2) y : 3.14 : float$}
+    };
+\end{tikzpicture}
+
+\section*{Task 2}
+Okay. My output seems to match the .table.correct files for all inputs.
+The only difference is the ordering (assumably because I use a different hashing scheme than you did).
+

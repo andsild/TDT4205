@@ -1,0 +1,79 @@
+String table:
+0: "Hello, world!"
+1: ""
+2: "Hello, \"world\"!"
+3: "+"
+4: ":="
+5: "-"
+6: ":="
+7: "+ (-"
+8: ") :="
+9: "*"
+10: ":="
+11: "/"
+12: ":="
+13: "Skip..."
+-- 
+Globals:
+main: function 0:
+	3 local variables, 0 are parameters:
+	a: local var 0
+	a_2: local var 2
+	_a1: local var 1
+-- 
+Bindings:
+Linked string 0
+Linked string 1
+Linked string 2
+Linked local var 1 ('_a1')
+Linked local var 2 ('a_2')
+Linked local var 0 ('a')
+Linked local var 1 ('_a1')
+Linked local var 2 ('a_2')
+Linked local var 1 ('_a1')
+Linked string 3
+Linked local var 2 ('a_2')
+Linked string 4
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 1 ('_a1')
+Linked local var 2 ('a_2')
+Linked local var 1 ('_a1')
+Linked string 5
+Linked local var 2 ('a_2')
+Linked string 6
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 1 ('_a1')
+Linked local var 2 ('a_2')
+Linked local var 1 ('_a1')
+Linked string 7
+Linked local var 2 ('a_2')
+Linked string 8
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 1 ('_a1')
+Linked local var 2 ('a_2')
+Linked local var 1 ('_a1')
+Linked string 9
+Linked local var 2 ('a_2')
+Linked string 10
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 1 ('_a1')
+Linked local var 2 ('a_2')
+Linked local var 1 ('_a1')
+Linked string 11
+Linked local var 2 ('a_2')
+Linked string 12
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked string 13
+Linked local var 0 ('a')

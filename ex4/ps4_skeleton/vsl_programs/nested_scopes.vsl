@@ -1,0 +1,24 @@
+VAR a
+FUNC nest ( a )
+BEGIN
+    PRINT "a=", a
+    IF a=0 THEN
+    BEGIN
+        VAR a
+        a := 1
+        PRINT "a=", a
+        IF a=1 THEN
+        BEGIN
+            VAR a
+            a := 2
+            PRINT "a=", a
+        END
+        IF a=1 THEN
+        BEGIN
+            VAR a
+            a := 3
+            PRINT "a=", a
+        END
+    END
+    RETURN 0
+END

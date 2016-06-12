@@ -1,0 +1,22 @@
+FUNC fibonacci_recursive( n )
+BEGIN
+    VAR f
+    f := fibonacci_number ( n )
+    PRINT "The", n, "th fibonacci number is", f
+    RETURN 0    // Success!
+END
+
+FUNC fibonacci_number( n )
+BEGIN
+    VAR y
+    y := 1
+    IF  n > 0 THEN
+    BEGIN
+        IF n-1 > 0 THEN
+            IF n-2 > 0 THEN
+                y := fibonacci_number(n-1) + fibonacci_number(n-2) 
+    END
+    ELSE
+        y := 0
+    RETURN y
+END

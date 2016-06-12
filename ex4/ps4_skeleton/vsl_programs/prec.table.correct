@@ -1,0 +1,11 @@
+String table:
+-- 
+Globals:
+unary_minus_precedence: function 0:
+    2 local variables, 0 are parameters:
+    a: local var 0
+    b: local var 1
+-- 
+Bindings:
+Linked local var 0 ('a')
+Linked local var 1 ('b')

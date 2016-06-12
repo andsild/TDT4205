@@ -1,0 +1,30 @@
+String table:
+0: "a="
+1: "a="
+2: "a="
+3: "a="
+-- 
+Globals:
+a: global variable
+nest: function 0:
+	4 local variables, 1 are parameters:
+	a: parameter 0
+	a: local var 0
+	a: local var 2
+	a: local var 1
+-- 
+Bindings:
+Linked string 0
+Linked parameter 0 ('a')
+Linked parameter 0 ('a')
+Linked local var 0 ('a')
+Linked string 1
+Linked local var 0 ('a')
+Linked local var 0 ('a')
+Linked local var 1 ('a')
+Linked string 2
+Linked local var 1 ('a')
+Linked local var 0 ('a')
+Linked local var 2 ('a')
+Linked string 3
+Linked local var 2 ('a')

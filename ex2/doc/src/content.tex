@@ -1,0 +1,56 @@
+\section*{Task 1}
+Transform to $LL(1)$:
+\begin{align*}
+S \rightarrow sCT|sCTwB && \\
+C \rightarrow c    && \\
+T \rightarrow t|e  &&  \\
+B \rightarrow Ba|a && \\
+&& \\
+B \rightarrow aB' && \textit{right-recursive} \\
+B' \rightarrow \epsilon | aB' && \textit{right-recursive} \\
+S' \rightarrow scT && \textit{factoring } \\
+S{'}{'} \rightarrow \epsilon | wB && \textit{factoring} \\
+S \rightarrow S'S'' && \textit{factoring} 
+\end{align*}
+
+\subsection*{Task 1b}
+$
+FIRST(S) \rightarrow  FIRST(S') \rightarrow  \{'s'\} \\
+FIRST(B) \rightarrow  {'a'} \\
+FIRST(B') \rightarrow  \{\epsilon{'}, {'}a{'}\} \\
+FIRST(T') \rightarrow  \{{'}sc{'}\}
+$
+\newline
+
+$
+FOLLOW(S) \rightarrow \{'\$'\} \\
+FOLLOW(S{'}) \rightarrow \{'\$'\, w\} \\
+FOLLOW(B) \rightarrow \{'\$'\} \\
+FOLLOW(B{'}) \rightarrow \{'\epsilon'\} \\
+FOLLOW(T) \rightarrow \{'\$'\}
+$
+
+\begin{tabular}{|l|l|l|l|l|l|l|}
+    T &w &c &t &a & s & \$ \\
+    \bottomrule
+    S &  & S' & & & S $\rightarrow$ S'S''  & \\
+    \bottomrule
+    S' & & & & & S' $\rightarrow$ scT & \\
+    \bottomrule
+    S'' &S' $\rightarrow$ wB  & & & &  & \\
+    \bottomrule
+    C & & C $\rightarrow$ c & & & & \\
+    \bottomrule
+    T & T $\rightarrow $ w & & T $\rightarrow$ t & & & T $\rightarrow \epsilon $ \\
+    \bottomrule
+    B & & & & B $\rightarrow$ aB'  &&  \\
+    \bottomrule
+    B' & & & & B $\rightarrow$ aB' & & B' $\rightarrow \epsilon $ \\
+    \bottomrule
+\end{tabular}
+
+
+
+\section*{Task 2}
+Note: my VSL parse trees do not exactly match the expected output- an extra node
+is added for the parenthesis. I hope this is okay and simply a trivial error.

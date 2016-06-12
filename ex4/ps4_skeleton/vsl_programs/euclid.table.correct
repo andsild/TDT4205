@@ -1,0 +1,51 @@
+String table:
+0: "Greatest common divisor of"
+1: "and"
+2: "is"
+3: "and"
+4: "are relative primes"
+-- 
+Globals:
+gcd: function 1:
+	3 local variables, 2 are parameters:
+	a: parameter 0
+	g: local var 0
+	b: parameter 1
+euclid: function 0:
+	2 local variables, 2 are parameters:
+	a: parameter 0
+	b: parameter 1
+-- 
+Bindings:
+Linked parameter 0 ('a')
+Linked parameter 0 ('a')
+Linked parameter 0 ('a')
+Linked parameter 1 ('b')
+Linked parameter 1 ('b')
+Linked parameter 1 ('b')
+Linked function 1 ('gcd')
+Linked parameter 0 ('a')
+Linked parameter 1 ('b')
+Linked string 0
+Linked parameter 0 ('a')
+Linked string 1
+Linked parameter 1 ('b')
+Linked string 2
+Linked function 1 ('gcd')
+Linked parameter 0 ('a')
+Linked parameter 1 ('b')
+Linked parameter 0 ('a')
+Linked string 3
+Linked parameter 1 ('b')
+Linked string 4
+Linked parameter 1 ('b')
+Linked local var 0 ('g')
+Linked function 1 ('gcd')
+Linked parameter 1 ('b')
+Linked parameter 0 ('a')
+Linked parameter 0 ('a')
+Linked parameter 1 ('b')
+Linked parameter 1 ('b')
+Linked local var 0 ('g')
+Linked parameter 0 ('a')
+Linked local var 0 ('g')

@@ -1,0 +1,61 @@
+Original program:
+1. a=1
+2. b=2
+3. c=3
+4. d=a+x
+5. e=b+c
+6. f=e
+7. g=f
+8. g=d+y
+9. a=b+c
+
+########
+1. Copy propagation
+
+1. a=1
+2. b=2
+3. c=3
+4. d=a+x
+7. g=b+c
+8. g=d+y
+9. a=b+c
+
+Steps:
+Remove #5, since we can directly put e into the right-hand-side of line #6.
+Then we propagate #6 to #7.
+
+########
+2. Common subexpression elimination
+
+
+1. a=1
+2. b=2
+3. c=3
+0. m=b+c
+4. d=a+x
+5. e=m
+6. f=e
+7. g=f
+8. g=d+y
+9. a=m
+
+Steps:
+introduce a new variable "m", that holds the value "b+c". Put this in line 5 and 9
+
+
+########
+3. Constant propagation
+1. a=1
+2. b=2
+3. c=3
+4. d=1+x
+5. e=2+3
+6. f=e
+7. g=f
+8. g=d+y
+9. a=2+3
+
+Steps:
+b and c are never assigned to, so we can safely replace them with their constant value.
+Line 5, 9 are modified. Since line #4 only uses a, we can also replace it by its constant.
+Since x is unknown, we cannot replace it (or later references of d)
